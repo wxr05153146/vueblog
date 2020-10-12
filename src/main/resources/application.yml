@@ -1,0 +1,28 @@
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+server:
+  port: 8088
+
+  shiro-redis:
+    enabled: true
+    redis-manager:
+      host: 127.0.0.1:6379
+
+  prj:
+    jwt:
+      # 加密秘钥
+      #f4e2e52034348f86b67cde581c0f9eb5 604800
+      secret: 289ebb101177145c0a9a845df1 aba601eb0e7e3f
+      # token有效时长，7天，单位秒
+      token-validity- in-seconds: 86400
+      token-validity- in-seconds- for- remember -me: 2592000
+      #expire: 604800
+      #header: Authorization
+
